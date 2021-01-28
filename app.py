@@ -10,6 +10,7 @@ app = Flask(__name__)
 model = joblib.load('flight_model.sav')
 
 @app.route('/')
+@cross_origin()
 def home():
     return render_template('home.html')
 
